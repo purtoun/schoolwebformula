@@ -252,7 +252,7 @@ nav.main-nav a.active {
 }
 
 /* ============ КАСТОМНЫЕ ЭЛЕМЕНТЫ-КАЛЬКУЛЯТОРЫ ============ */
-calc-card {
+.calc-card {
   display: block;
   background: var(--card);
   border: 1px solid var(--card-border);
@@ -261,17 +261,17 @@ calc-card {
   transition: transform 0.25s, box-shadow 0.25s;
 }
 
-calc-card:hover {
+.calc-card:hover {
   transform: translateY(-4px);
   box-shadow: var(--shadow);
 }
 
-calc-card h4 {
+.calc-card h4 {
   font-size: 1.1rem;
   margin-bottom: 4px;
 }
 
-calc-card .formula-hint {
+.calc-card .formula-hint {
   font-size: 0.85rem;
   color: var(--muted);
   margin-bottom: 16px;

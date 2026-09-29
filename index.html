@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Умные Считалки — формулы по математике и физике</title>
-  <meta name="description" content="Сайт-помощник: готовые считалки (калькуляторы формул) по геометрии, алгебре и физике." />
+  <title>Формулы Онлайн — калькуляторы по математике и физике</title>
+  <meta name="description" content="Сайт-помощник: калькуляторы формул по геометрии, алгебре и физике." />
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
@@ -14,7 +14,7 @@
     <div class="container header-inner">
       <div class="logo">
         <span class="logo-icon">🧮</span>
-        Умные&nbsp;Считалки
+        Формулы&nbsp;Онлайн
       </div>
       <nav class="main-nav">
         <a href="#geometry">Геометрия</a>
@@ -27,7 +27,7 @@
   <!-- ===== ГЛАВНЫЙ ЭКРАН ===== -->
   <section class="hero container">
     <h1>Формулы, которые <span class="gradient-text">считают за тебя</span></h1>
-    <p>Коллекция готовых «считалок» — введи числа, нажми кнопку, и формула сама посчитает площадь, корни уравнения или скорость.</p>
+    <p>Коллекция готовых калькуляторов формул — введи числа, нажми кнопку, и сайт сам посчитает площадь, корни уравнения или скорость.</p>
 
     <div class="topic-grid">
       <a href="#geometry" class="topic-card geo">
@@ -37,12 +37,12 @@
       </a>
       <a href="#algebra" class="topic-card alg">
         <span class="icon">🔢</span>
-        <h3>Формулы-помощники</h3>
+        <h3>Помощник по алгебре</h3>
         <p>Квадратные уравнения, прогрессии, проценты и степени</p>
       </a>
       <a href="#physics" class="topic-card phy">
         <span class="icon">⚡</span>
-        <h3>Законы в одну кнопку</h3>
+        <h3>Законы физики в одну кнопку</h3>
         <p>Скорость, сила, плотность, работа и закон Ома</p>
       </a>
     </div>
@@ -54,64 +54,64 @@
       <span class="s-icon">📐</span>
       <h2>Магия фигур — геометрия</h2>
     </div>
-    <p class="section-sub">Считалки для площадей, периметров и объёмов фигур.</p>
+    <p class="section-sub">Калькуляторы площадей, периметров и объёмов фигур.</p>
 
     <div class="calc-grid">
 
-      <rect-calc>
+      <div class="calc-card" id="rect-card">
         <h4>Прямоугольник</h4>
-        <p class="formula-hint">S = a·b, P = 2(a + b)</p>
+        <p class="formula-hint">Площадь S = a · b, периметр P = 2 · (a + b)</p>
         <div class="field-row">
-          <div class="field"><label>Сторона a</label><input id="a" type="number" placeholder="5" /></div>
-          <div class="field"><label>Сторона b</label><input id="b" type="number" placeholder="3" /></div>
+          <div class="field"><label>Сторона a</label><input id="rect-a" type="number" placeholder="5" /></div>
+          <div class="field"><label>Сторона b</label><input id="rect-b" type="number" placeholder="3" /></div>
         </div>
-        <button class="btn" type="button">Посчитать</button>
+        <button class="btn" id="rect-btn" type="button">Посчитать</button>
         <div class="result"></div>
-      </rect-calc>
+      </div>
 
-      <triangle-calc>
+      <div class="calc-card" id="tri-card">
         <h4>Треугольник</h4>
-        <p class="formula-hint">S = ½ · a · h</p>
+        <p class="formula-hint">Площадь S = ½ · основание · высота</p>
         <div class="field-row">
-          <div class="field"><label>Основание a</label><input id="a" type="number" placeholder="6" /></div>
-          <div class="field"><label>Высота h</label><input id="h" type="number" placeholder="4" /></div>
+          <div class="field"><label>Основание a</label><input id="tri-a" type="number" placeholder="6" /></div>
+          <div class="field"><label>Высота h</label><input id="tri-h" type="number" placeholder="4" /></div>
         </div>
-        <button class="btn" type="button">Посчитать</button>
+        <button class="btn" id="triangle-btn" type="button">Посчитать</button>
         <div class="result"></div>
-      </triangle-calc>
+      </div>
 
-      <circle-calc>
+      <div class="calc-card" id="circle-card">
         <h4>Круг</h4>
-        <p class="formula-hint">L = 2πr, S = πr²</p>
+        <p class="formula-hint">Длина окружности L = 2πr, площадь S = πr²</p>
         <div class="field-row">
-          <div class="field"><label>Радиус r</label><input id="r" type="number" placeholder="7" /></div>
+          <div class="field"><label>Радиус r</label><input id="circle-r" type="number" placeholder="7" /></div>
         </div>
-        <button class="btn" type="button">Посчитать</button>
+        <button class="btn" id="circle-btn" type="button">Посчитать</button>
         <div class="result"></div>
-      </circle-calc>
+      </div>
 
-      <pythagoras-calc>
+      <div class="calc-card" id="pyth-card">
         <h4>Теорема Пифагора</h4>
-        <p class="formula-hint">c = √(a² + b²)</p>
+        <p class="formula-hint">Гипотенуза c = √(a² + b²)</p>
         <div class="field-row">
-          <div class="field"><label>Катет a</label><input id="a" type="number" placeholder="3" /></div>
-          <div class="field"><label>Катет b</label><input id="b" type="number" placeholder="4" /></div>
+          <div class="field"><label>Катет a</label><input id="pyth-a" type="number" placeholder="3" /></div>
+          <div class="field"><label>Катет b</label><input id="pyth-b" type="number" placeholder="4" /></div>
         </div>
-        <button class="btn" type="button">Посчитать</button>
+        <button class="btn" id="pythagoras-btn" type="button">Посчитать</button>
         <div class="result"></div>
-      </pythagoras-calc>
+      </div>
 
-      <box-calc>
+      <div class="calc-card" id="box-card">
         <h4>Параллелепипед</h4>
-        <p class="formula-hint">V = a·b·c, S = 2(ab + ac + bc)</p>
+        <p class="formula-hint">Объём V = a · b · c, площадь поверхности S = 2(ab + ac + bc)</p>
         <div class="field-row">
-          <div class="field"><label>a</label><input id="a" type="number" placeholder="2" /></div>
-          <div class="field"><label>b</label><input id="b" type="number" placeholder="3" /></div>
-          <div class="field"><label>c</label><input id="c" type="number" placeholder="4" /></div>
+          <div class="field"><label>a</label><input id="box-a" type="number" placeholder="2" /></div>
+          <div class="field"><label>b</label><input id="box-b" type="number" placeholder="3" /></div>
+          <div class="field"><label>c</label><input id="box-c" type="number" placeholder="4" /></div>
         </div>
-        <button class="btn" type="button">Посчитать</button>
+        <button class="btn" id="box-btn" type="button">Посчитать</button>
         <div class="result"></div>
-      </box-calc>
+      </div>
 
     </div>
   </section>
@@ -120,57 +120,57 @@
   <section id="algebra" class="section container">
     <div class="section-title">
       <span class="s-icon">🔢</span>
-      <h2>Формулы-помощники — алгебра</h2>
+      <h2>Помощник по алгебре</h2>
     </div>
-    <p class="section-sub">Уравнения, прогрессии и проценты — всё считается по коэффициентам.</p>
+    <p class="section-sub">Уравнения, прогрессии, проценты и степени — всё считается по коэффициентам.</p>
 
     <div class="calc-grid">
 
-      <quadratic-calc>
+      <div class="calc-card" id="quad-card">
         <h4>Квадратное уравнение</h4>
-        <p class="formula-hint">ax² + bx + c = 0 → ищем D и корни</p>
+        <p class="formula-hint">ax² + bx + c = 0 → ищем дискриминант D и корни x₁, x₂</p>
         <div class="field-row">
-          <div class="field"><label>Коэф. a</label><input id="a" type="number" placeholder="1" /></div>
-          <div class="field"><label>Коэф. b</label><input id="b" type="number" placeholder="-5" /></div>
-          <div class="field"><label>Коэф. c</label><input id="c" type="number" placeholder="6" /></div>
+          <div class="field"><label>Коэф. a</label><input id="quad-a" type="number" placeholder="1" /></div>
+          <div class="field"><label>Коэф. b</label><input id="quad-b" type="number" placeholder="-5" /></div>
+          <div class="field"><label>Коэф. c</label><input id="quad-c" type="number" placeholder="6" /></div>
         </div>
-        <button class="btn" type="button">Решить</button>
+        <button class="btn" id="quadratic-btn" type="button">Решить</button>
         <div class="result"></div>
-      </quadratic-calc>
+      </div>
 
-      <arith-prog-calc>
+      <div class="calc-card" id="prog-card">
         <h4>Арифметическая прогрессия</h4>
-        <p class="formula-hint">aₙ = a₁ + d(n−1), Sₙ = (a₁ + aₙ)/2 · n</p>
+        <p class="formula-hint">aₙ = a₁ + d(n−1), сумма Sₙ = (a₁ + aₙ)/2 · n</p>
         <div class="field-row">
-          <div class="field"><label>a₁</label><input id="a1" type="number" placeholder="2" /></div>
-          <div class="field"><label>Шаг d</label><input id="d" type="number" placeholder="3" /></div>
-          <div class="field"><label>Номер n</label><input id="n" type="number" placeholder="10" /></div>
+          <div class="field"><label>Первый член a₁</label><input id="prog-a1" type="number" placeholder="2" /></div>
+          <div class="field"><label>Шаг d</label><input id="prog-d" type="number" placeholder="3" /></div>
+          <div class="field"><label>Номер n</label><input id="prog-n" type="number" placeholder="10" /></div>
         </div>
-        <button class="btn" type="button">Посчитать</button>
+        <button class="btn" id="prog-btn" type="button">Посчитать</button>
         <div class="result"></div>
-      </arith-prog-calc>
+      </div>
 
-      <percent-calc>
+      <div class="calc-card" id="perc-card">
         <h4>Проценты</h4>
-        <p class="formula-hint">X% от числа Y = X/100 · Y</p>
+        <p class="formula-hint">Сколько будет X процентов от числа Y: ответ = X : 100 · Y</p>
         <div class="field-row">
-          <div class="field"><label>Процент %</label><input id="p" type="number" placeholder="13" /></div>
-          <div class="field"><label>Число</label><input id="x" type="number" placeholder="200" /></div>
+          <div class="field"><label>Процент %</label><input id="perc-p" type="number" placeholder="13" /></div>
+          <div class="field"><label>Число</label><input id="perc-x" type="number" placeholder="200" /></div>
         </div>
-        <button class="btn" type="button">Посчитать</button>
+        <button class="btn" id="percent-btn" type="button">Посчитать</button>
         <div class="result"></div>
-      </percent-calc>
+      </div>
 
-      <power-root-calc>
-        <h4>Степень</h4>
-        <p class="formula-hint">base ^ exp</p>
+      <div class="calc-card" id="pow-card">
+        <h4>Степень числа</h4>
+        <p class="formula-hint">Возводим число a в степень n, например: 2¹⁰ = 1024</p>
         <div class="field-row">
-          <div class="field"><label>Основание</label><input id="base" type="number" placeholder="2" /></div>
-          <div class="field"><label>Показатель</label><input id="exp" type="number" placeholder="10" /></div>
+          <div class="field"><label>Число a</label><input id="pow-a" type="number" placeholder="2" /></div>
+          <div class="field"><label>Степень n</label><input id="pow-n" type="number" placeholder="10" /></div>
         </div>
-        <button class="btn" type="button">Возвести</button>
+        <button class="btn" id="power-btn" type="button">Возвести в степень</button>
         <div class="result"></div>
-      </power-root-calc>
+      </div>
 
     </div>
   </section>
@@ -179,77 +179,70 @@
   <section id="physics" class="section container">
     <div class="section-title">
       <span class="s-icon">⚡</span>
-      <h2>Законы в одну кнопку — физика</h2>
+      <h2>Законы физики в одну кнопку</h2>
     </div>
-    <p class="section-sub">Классические школьные формулы физики в формате быстрых считалок.</p>
+    <p class="section-sub">Классические школьные формулы физики в формате быстрых калькуляторов.</p>
 
     <div class="calc-grid">
 
-      <speed-calc>
+      <div class="calc-card" id="speed-card">
         <h4>Скорость</h4>
-        <p class="formula-hint">v = s / t</p>
+        <p class="formula-hint">v = s : t</p>
         <div class="field-row">
-          <div class="field"><label>Путь s, м</label><input id="s" type="number" placeholder="100" /></div>
-          <div class="field"><label>Время t, с</label><input id="t" type="number" placeholder="20" /></div>
+          <div class="field"><label>Путь s, м</label><input id="speed-s" type="number" placeholder="100" /></div>
+          <div class="field"><label>Время t, с</label><input id="speed-t" type="number" placeholder="20" /></div>
         </div>
-        <button class="btn" type="button">Посчитать</button>
+        <button class="btn" id="speed-btn" type="button">Посчитать</button>
         <div class="result"></div>
-      </speed-calc>
+      </div>
 
-      <force-calc>
+      <div class="calc-card" id="force-card">
         <h4>Сила (2-й закон Ньютона)</h4>
-        <p class="formula-hint">F = m·a</p>
+        <p class="formula-hint">F = m · a</p>
         <div class="field-row">
-          <div class="field"><label>Масса m, кг</label><input id="m" type="number" placeholder="10" /></div>
-          <div class="field"><label>Ускорение a, м/с²</label><input id="a" type="number" placeholder="2" /></div>
+          <div class="field"><label>Масса m, кг</label><input id="force-m" type="number" placeholder="10" /></div>
+          <div class="field"><label>Ускорение a, м/с²</label><input id="force-a" type="number" placeholder="2" /></div>
         </div>
-        <button class="btn" type="button">Посчитать</button>
+        <button class="btn" id="force-btn" type="button">Посчитать</button>
         <div class="result"></div>
-      </force-calc>
+      </div>
 
-      <density-calc>
+      <div class="calc-card" id="dens-card">
         <h4>Плотность</h4>
-        <p class="formula-hint">ρ = m / V</p>
+        <p class="formula-hint">ρ = m : V</p>
         <div class="field-row">
-          <div class="field"><label>Масса m, кг</label><input id="m" type="number" placeholder="80" /></div>
-          <div class="field"><label>Объём V, м³</label><input id="v" type="number" placeholder="0.01" /></div>
+          <div class="field"><label>Масса m, кг</label><input id="dens-m" type="number" placeholder="80" /></div>
+          <div class="field"><label>Объём V, м³</label><input id="dens-v" type="number" placeholder="0.01" /></div>
         </div>
-        <button class="btn" type="button">Посчитать</button>
+        <button class="btn" id="density-btn" type="button">Посчитать</button>
         <div class="result"></div>
-      </density-calc>
+      </div>
 
-      <work-power-calc>
+      <div class="calc-card" id="work-card">
         <h4>Работа и мощность</h4>
-        <p class="formula-hint">A = F·s, N = A / t</p>
+        <p class="formula-hint">A = F · s, затем N = A : t</p>
         <div class="field-row">
-          <div class="field"><label>F, Н</label><input id="f" type="number" placeholder="50" /></div>
-          <div class="field"><label>s, м</label><input id="s" type="number" placeholder="4" /></div>
-          <div class="field"><label>t, с</label><input id="t" type="number" placeholder="10" /></div>
+          <div class="field"><label>Сила F, Н</label><input id="work-f" type="number" placeholder="50" /></div>
+          <div class="field"><label>Путь s, м</label><input id="work-s" type="number" placeholder="4" /></div>
+          <div class="field"><label>Время t, с</label><input id="work-t" type="number" placeholder="10" /></div>
         </div>
-        <button class="btn" type="button">Посчитать</button>
+        <button class="btn" id="work-btn" type="button">Посчитать</button>
         <div class="result"></div>
-      </work-power-calc>
+      </div>
 
-      <ohm-calc>
+      <div class="calc-card" id="ohm-card">
         <h4>Закон Ома</h4>
-        <p class="formula-hint">I = U / R</p>
+        <p class="formula-hint">I = U : R</p>
         <div class="field-row">
-          <div class="field"><label>Напряжение U, В</label><input id="u" type="number" placeholder="220" /></div>
-          <div class="field"><label>Сопротивление R, Ом</label><input id="r" type="number" placeholder="44" /></div>
+          <div class="field"><label>Напряжение U, В</label><input id="ohm-u" type="number" placeholder="220" /></div>
+          <div class="field"><label>Сопротивление R, Ом</label><input id="ohm-r" type="number" placeholder="44" /></div>
         </div>
-        <button class="btn" type="button">Посчитать</button>
+        <button class="btn" id="ohm-btn" type="button">Посчитать</button>
         <div class="result"></div>
-      </ohm-calc>
+      </div>
 
     </div>
   </section>
-
-  <!-- ===== ПОДВАЛ ===== -->
-  <footer>
-    <div class="container">
-      🧮 Умные Считалки — сделано с ❤️ на чистом HTML, CSS и JavaScript
-    </div>
-  </footer>
 
   <script src="script.js"></script>
 </body>
